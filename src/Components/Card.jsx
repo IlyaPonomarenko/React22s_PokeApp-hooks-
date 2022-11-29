@@ -4,16 +4,15 @@ import { Link } from "react-router-dom";
 import "./Card.css";
 
 
-const Card = (props) => {
+const Card = ({image, name}) => {
   return (
     <div className="card">
       <div className="card-icon">
-        <img src={props.image} alt="pokemon.png" />
+        <img src={image} alt="pokemon.png" />
       </div>
       <div className="card-text">
-        <Link to={`${props.name}`}> <h2>{props.name}</h2></Link>
+        <Link to={`${name}`}> <h2>{name}</h2></Link>
         <div className="icons">
-            {props.type}
         </div>
       </div>
     </div>
